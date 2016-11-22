@@ -30,3 +30,9 @@
 # Wifi
 /system/vendor/bin/conn_init                                u:object_r:conn_init_exec:s0
 /system/vendor/bin/init\.qcom\.wifi\.sh                     u:object_r:conn_init_exec:s0
+
+/system/vendor/bin/init\.qcom\.devstart\.sh            u:object_r:init-qcom-devstart-sh_exec:s0
+/system/vendor/bin/init\.qcom\.devwait\.sh             u:object_r:init-qcom-devwait-sh_exec:s0
+
+# Sysfs entry for audio
+/sys/kernel/boot_adsp/boot         u:object_r:sysfs_audio:s0

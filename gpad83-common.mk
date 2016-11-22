@@ -186,6 +186,10 @@ PRODUCT_COPY_FILES += \
     device/lge/gpad83-common/rootdir/init.qcom.usb.rc:root/init.qcom.usb.rc \
     device/lge/gpad83-common/rootdir/ueventd.qcom.rc:root/ueventd.qcom.rc
 
+PRODUCT_COPY_FILES += \
+    device/lge/gpad83-common/rootdir/etc/init.qcom.devwait.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.devwait.sh \
+    device/lge/gpad83-common/rootdir/etc/init.qcom.devstart.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.devstart.sh
+
 # Sensors
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/_hals.conf:system/vendor/etc/sensors/_hals.conf

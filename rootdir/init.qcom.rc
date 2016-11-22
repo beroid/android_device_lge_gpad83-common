@@ -35,6 +35,9 @@ on early-boot
     # Set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
 
+    # Busy loop to wait for devices booted by devstart_sh just in case device not ready
+    exec - root root system -- /vendor/bin/init.qcom.devwait.sh
+
 on boot
     # Set default LCD brightness
     write /sys/class/leds/lcd-backlight/brightness 102
@@ -95,6 +98,10 @@ on boot
 
     # Wifi firmware reload path
     chown wifi wifi /sys/module/wlan/parameters/fwpath
+
+on post-fs
+    # Start devices by sysfs trigger
+    start devstart_sh
 
 # msm specific files that need to be created on /data
 on post-fs-data
@@ -253,3 +260,10 @@ service qseecomd /vendor/bin/qseecomd
     class late_start
     user system
     group system
+
+service devstart_sh /vendor/bin/init.qcom.devstart.sh
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
