@@ -53,6 +53,9 @@ BOARD_CHARGER_DISABLE_INIT_BLANK := true
 BOARD_CHARGING_CMDLINE_NAME := "androidboot.mode"
 BOARD_CHARGING_CMDLINE_VALUE := "chargerlogo"
 
+# Device manifest
+DEVICE_MANIFEST_FILE := device/lge/gpad83-common/manifest.xml
+
 # Dex-preoptimization to speed up first boot sequence
 ifeq ($(HOST_OS),linux)
   ifeq ($(WITH_DEXPREOPT),)
