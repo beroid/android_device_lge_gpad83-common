@@ -181,6 +181,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.power=awifi
 
+# RenderScript HAL
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
+
 # Rootdir
 PRODUCT_COPY_FILES += \
     device/lge/gpad83-common/rootdir/fstab.qcom:root/fstab.qcom \
