@@ -114,6 +114,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196608 \
     ro.sf.lcd_density=320 \
     persist.hwc.mdpcomp.enable=true \
+    debug.hwui.use_buffer_age=false \
     debug.egl.recordable.rgba8888=1
 
 # Hardware-specific features
