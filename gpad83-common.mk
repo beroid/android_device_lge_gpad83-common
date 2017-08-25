@@ -29,6 +29,8 @@ $(call inherit-product, frameworks/native/build/tablet-7in-xhdpi-2048-dalvik-hea
 
 # Audio
 PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@2.0-impl \
     audio.primary.msm8960 \
     audio.a2dp.default \
     audio.usb.default \
@@ -40,6 +42,9 @@ PRODUCT_COPY_FILES += \
     device/lge/gpad83-common/configs/mixer_paths.xml:system/etc/mixer_paths.xml
 
 # Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl
+
 PRODUCT_COPY_FILES += \
     device/lge/gpad83-common/configs/init.qcom.bt.sh:system/bin/init.qcom.bt.sh
 
@@ -53,6 +58,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-impl \
+    camera.device@3.2-impl \
     camera.msm8960 \
     libcamera_shim \
     Snap
@@ -75,8 +82,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-swap=false
 
 # DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl \
+
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
+
+# GNSS HAL
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -85,6 +99,10 @@ PRODUCT_PACKAGES += \
 
 # Graphics
 PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.composer@2.1-impl \
+    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.memtrack@1.0-impl \
     libgenlock \
     hwcomposer.msm8960 \
     gralloc.msm8960 \
@@ -123,8 +141,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     hwaddrs
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl
+
 # Lights
 PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-impl \
     lights.msm8960
 
 # Media
@@ -149,6 +172,7 @@ PRODUCT_PACKAGES += \
 
 # Power HAL
 PRODUCT_PACKAGES += \
+    android.hardware.power@1.0-impl \
     power.awifi
 
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -163,6 +187,9 @@ PRODUCT_COPY_FILES += \
     device/lge/gpad83-common/rootdir/ueventd.qcom.rc:root/ueventd.qcom.rc
 
 # Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sensors.wl_dis=true \
     ro.qualcomm.sensors.smd=true
@@ -175,8 +202,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     device/lge/gpad83-common/configs/thermald.conf:system/etc/thermald.conf
 
+# USB HAL
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
+
 # Wifi
 PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service \
     conn_init \
     hostapd \
     wificond \
