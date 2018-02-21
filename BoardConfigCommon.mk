@@ -106,6 +106,10 @@ include device/qcom/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += device/lge/gpad83-common/sepolicy
 
+# Shims
+TARGET_LD_SHIM_LIBS := \
+    /system/lib/hw/camera.vendor.msm8960.so|libshims_camera.so
+
 # Snapdragon LLVM
 TARGET_USE_SDCLANG := true
 
