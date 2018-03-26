@@ -47,7 +47,7 @@ PRODUCT_PACKAGES += \
     libbt-vendor
 
 PRODUCT_COPY_FILES += \
-    device/lge/gpad83-common/configs/init.qcom.bt.sh:system/bin/init.qcom.bt.sh
+    device/lge/gpad83-common/configs/init.qcom.bt.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.bt.sh
 
 PRODUCT_PROPERTY_OVERRIDES += \
     qcom.bluetooth.soc=smd \
@@ -205,7 +205,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Thermal
 PRODUCT_COPY_FILES += \
-    device/lge/gpad83-common/configs/thermald.conf:system/etc/thermald.conf
+    device/lge/gpad83-common/configs/thermald.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermald.conf
 
 # USB HAL
 PRODUCT_PACKAGES += \
@@ -225,11 +225,11 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
-    device/lge/gpad83-common/configs/init.qcom.wifi.sh:system/bin/init.qcom.wifi.sh
+    device/lge/gpad83-common/configs/init.qcom.wifi.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.wifi.sh
 
 PRODUCT_COPY_FILES += \
-    device/lge/gpad83-common/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
-    device/lge/gpad83-common/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
+    device/lge/gpad83-common/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
+    device/lge/gpad83-common/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0

@@ -27,4 +27,5 @@ endif
 
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := power.awifi
+LOCAL_PROPRIETARY_MODULE := true
 include $(BUILD_SHARED_LIBRARY)
