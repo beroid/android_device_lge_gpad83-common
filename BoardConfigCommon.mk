@@ -51,6 +51,7 @@ BOARD_CHARGING_CMDLINE_VALUE := "chargerlogo"
 
 # Device manifest
 DEVICE_MANIFEST_FILE := device/lge/gpad83-common/configs/manifest.xml
+DEVICE_MATRIX_FILE := device/lge/gpad83-common/configs/compatibility_matrix.xml
 
 # Dex-preoptimization to speed up first boot sequence
 ifeq ($(HOST_OS),linux)
