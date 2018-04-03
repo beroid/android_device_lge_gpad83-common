@@ -24,6 +24,10 @@ TARGET_CPU_VARIANT := krait
 # Audio
 BOARD_USES_ALSA_AUDIO:= true
 
+# AOSP Audio Variant
+USE_DEVICE_SPECIFIC_AUDIO := true
+DEVICE_SPECIFIC_AUDIO_PATH := hardware/qcom/audio/default
+
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
@@ -66,8 +70,6 @@ BOARD_VENDOR_QCOM_LOC_PDK_FEATURE_SET := true
 TARGET_NO_RPC := true
 
 # Graphics
-USE_OPENGL_RENDERER := true
-NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 TARGET_USES_ION := true
 TARGET_DISPLAY_USE_RETIRE_FENCE := true
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
@@ -95,6 +97,12 @@ TARGET_USERIMAGES_USE_EXT4         := true
 TARGET_USERIMAGES_USE_F2FS         := true
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE  := ext4
 BOARD_FLASH_BLOCK_SIZE             := 131072      # (BOARD_KERNEL_PAGESIZE * 64)
+
+# QCOM Media Extensions
+TARGET_USES_MEDIA_EXTENSIONS := true
+
+# QCOM hardware
+BOARD_USES_QCOM_HARDWARE := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/lge/gpad83-common/rootdir/fstab.qcom
