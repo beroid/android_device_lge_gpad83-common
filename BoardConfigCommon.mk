@@ -46,10 +46,10 @@ TARGET_NO_RADIOIMAGE := true
 TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 
 # Charger
-BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
-BOARD_NO_CHARGER_LED := true
 BOARD_CHARGER_ENABLE_SUSPEND := true
-BOARD_CHARGER_DISABLE_INIT_BLANK := true
+
+# Offmode Charging
+BOARD_HEALTHD_CUSTOM_CHARGER_RES := device/lge/gpad83-common/charger/images
 
 # Device manifest
 DEVICE_MANIFEST_FILE := device/lge/gpad83-common/configs/manifest.xml
