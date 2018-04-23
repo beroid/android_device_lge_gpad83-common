@@ -177,6 +177,12 @@ on post-fs-data
 on property:dev.bootcomplete=1
     write /sys/devices/virtual/graphics/fb1/hdmi_boot_completed 1
 
+on charger
+    wait /dev/block/platform/msm_sdcc.1/by-name/system
+    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/system /system ro barrier=1
+
+    start rmt_storage
+
 service rmt_storage /vendor/bin/rmt_storage
     class core
     user root
