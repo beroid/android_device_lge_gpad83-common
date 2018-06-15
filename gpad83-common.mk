@@ -98,6 +98,9 @@ PRODUCT_PACKAGES += \
     gps.conf \
     gps.msm8960
 
+PRODUCT_COPY_FILES += \
+    device/lge/gpad83-common/configs/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf
+
 # Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
