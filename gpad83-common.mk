@@ -71,7 +71,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.qcom.bluetooth.soc=pronto \
-    ro.qualcomm.bt.hci_transport=smd
+    ro.qualcomm.bt.hci_transport=smd \
+    ro.bt.bdaddr_path=/data/misc/bluetooth/bdaddr
 
 # CABL
 PRODUCT_PROPERTY_OVERRIDES += \

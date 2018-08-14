@@ -9,9 +9,12 @@ allow hwaddrs self:capability dac_override;
 allow hwaddrs misc_block_device:blk_file r_file_perms;
 
 # Allow /data/misc/bluetooth access
-allow hwaddrs bluetooth_data_file:dir w_dir_perms;
 allow hwaddrs bluetooth_data_file:file create_file_perms;
+allow hwaddrs bluetooth_data_file:dir { search write add_name };
 
 # Allow /data/misc/wifi access
-allow hwaddrs wifi_data_file:dir w_dir_perms;
 allow hwaddrs wifi_data_file:file create_file_perms;
+allow hwaddrs wifi_data_file:dir { search write add_name };
+
+allow hwaddrs persist_file:file create_file_perms;
+allow hwaddrs persist_file:dir { search write add_name };

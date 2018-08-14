@@ -197,13 +197,14 @@ service rmt_storage /vendor/bin/rmt_storage
 
 service hwaddrs /vendor/bin/hwaddrs
     class core
-    user system
-    group system wifi
+    user root
+    group system
     oneshot
 
 on property:init.svc.hwaddrs=stopped
     chmod 644 /data/misc/wifi/macaddr
     chmod 644 /data/misc/bluetooth/bdaddr
+    chown bluetooth bluetooth /data/misc/bluetooth/bdaddr
 
 service hciattach /vendor/bin/init.qcom.bt.sh
     class late_start
