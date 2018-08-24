@@ -23,10 +23,8 @@ TARGET_CPU_VARIANT := krait
 
 # Audio
 BOARD_USES_ALSA_AUDIO:= true
-
-# AOSP Audio Variant
-USE_DEVICE_SPECIFIC_AUDIO := true
-DEVICE_SPECIFIC_AUDIO_PATH := hardware/qcom/audio/default
+AUDIO_USE_LL_AS_PRIMARY_OUTPUT := true
+USE_CUSTOM_AUDIO_POLICY := 1
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
