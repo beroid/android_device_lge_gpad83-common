@@ -50,7 +50,7 @@ PRODUCT_COPY_FILES += \
     device/lge/gpad83-common/configs/init.qcom.bt.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.bt.sh
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    qcom.bluetooth.soc=smd \
+    vendor.qcom.bluetooth.soc=pronto \
     ro.qualcomm.bt.hci_transport=smd
 
 # CABL
