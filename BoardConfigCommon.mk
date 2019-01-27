@@ -114,9 +114,6 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_LD_SHIM_LIBS := \
     /system/vendor/lib/hw/camera.vendor.msm8960.so|libshims_camera.so
 
-# Snapdragon LLVM
-TARGET_USE_SDCLANG := true
-
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_WLAN_DEVICE := qcwcn
