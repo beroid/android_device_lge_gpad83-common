@@ -173,6 +173,10 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl \
     lights.msm8960
 
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@1.0-service-legacymm
+
 # Media
 PRODUCT_COPY_FILES += \
     device/lge/gpad83-common/configs/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
