@@ -81,7 +81,6 @@ BOARD_GLOBAL_CPPFLAGS += -DQCOM_BSP_LEGACY
 
 # Hardware tunables
 BOARD_HARDWARE_CLASS := device/lge/gpad83-common/lineagehw/
-TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/lge_touch/knock_on"
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/lge/v500
@@ -103,6 +102,12 @@ TARGET_USERIMAGES_USE_EXT4         := true
 TARGET_USERIMAGES_USE_F2FS         := true
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE  := ext4
 BOARD_FLASH_BLOCK_SIZE             := 131072      # (BOARD_KERNEL_PAGESIZE * 64)
+
+# Power
+TARGET_HAS_LEGACY_POWER_STATS := true
+TARGET_HAS_NO_WLAN_STATS := true
+TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/lge_touch/knock_on"
+TARGET_USES_INTERACTION_BOOST := true
 
 # QCOM Media Extensions
 TARGET_USES_MEDIA_EXTENSIONS := true
